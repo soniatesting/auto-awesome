@@ -15,6 +15,9 @@ public class MainPage {
     @FindBy(css = "[data-test='site-header-search-action']")
     public WebElement searchButton;
 
+    @FindBy(css = "nav > [data-test-marker=\"Learning Tools\"]")
+    public WebElement learningtoolsMenu;
+
     public MainPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }

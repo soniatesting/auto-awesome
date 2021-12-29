@@ -10,6 +10,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.assertEquals;
@@ -68,5 +69,13 @@ public class MainPageTest {
         WebElement productsList = driver.findElement(By.id("products-page"));
         assertTrue(productsList.isDisplayed());
         assertEquals(driver.getTitle(), "All Developer Tools and Products by JetBrains");
+    }
+
+    @Test
+    public void learningtoolsMenu() {
+        mainPage.learningtoolsMenu.click();
+
+        Boolean learningMenuPopup = driver.getPageSource().contains("EDUCATIONAL PRODUCTS");
+        assertTrue((learningMenuPopup));
     }
 }
