@@ -31,7 +31,7 @@ public class MainPageTest {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://www.jetbrains.com/");
 
-        mainPage = new MainPage(driver);
+        mainPage = new MainPage(driver); // ignore it '( it is for testing purose)
     }
 
     @AfterMethod
